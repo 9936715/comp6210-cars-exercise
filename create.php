@@ -22,56 +22,23 @@ include_once('helpers/functions.php');
     <label for="make" class="col-sm-1 col-form-label">
     Make
     </label>
-    <div class="col-sm-5">
-    <input type="text" name="make" id="make">
+    <div class="col-sm-3">
+    <input type="text" name="make" id="make" class="form-control">
     </div>
     </div>
 
-    <div class="form-group row">
-    <label for="model_1" class="col-sm-1 col-form-label">
-    Model 1
-    </label>
-    <div class="col-sm-5">
-    <input type="text" name="model_1" id="model_1">
-    </div>
-    </div>
-
-    <div class="form-group row">
-    <label for="model_2" class="col-sm-1 col-form-label">
-    Model 2
-    </label>
-    <div class="col-sm-5">
-    <input type="text" name="model_2" id="model_2">
-    </div>
-    </div>
-
-    <div class="form-group row">
-    <label for="model_3" class="col-sm-1 col-form-label">
-    Model 3
-    </label>
-    <div class="col-sm-5">
-    <input type="text" name="model_3" id="model_3">
-    </div>
-    </div>
-
-    <div class="form-group row">
-    <label for="model_4" class="col-sm-1 col-form-label">
-    Model 4
-    </label>
-    <div class="col-sm-5">
-    <input type="text" name="model_4" id="model_4">
-    </div>
-    </div>
-
-    <div class="form-group row">
-    <label for="model_5" class="col-sm-1 col-form-label">
-    Model 5
-    </label>
-    <div class="col-sm-5">
-    <input type="text" name="model_5" id="model_5">
-    </div>
-    </div>
-    
+    <?php
+for($i= 1; $i < 6; $i++){
+    echo '<div class="form-group row">';
+    echo '<label for="model_'.$i.'" class="col-sm-1 col-form-label">';
+    echo "Model ".$i;
+    echo "</label>";
+    echo '<div class="col-sm-3">';
+    echo '<input class="form-control" type="text" name="model_'.$i.'" id="model_'.$i.'">';
+    echo "</div>";
+    echo "</div>";
+}
+?>
     <div class="form-group row">
     <div class="col-sm-1">
     </div>
